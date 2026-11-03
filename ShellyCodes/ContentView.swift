@@ -4,6 +4,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var path: [Route] = []
     @AppStorage("welcomed") private var welcomed = false
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -20,6 +21,11 @@ struct ContentView: View {
         .fullScreenCover(isPresented: .constant(!welcomed)) {
             WelcomeView { welcomed = true }
         }
+        #if DEBUG
+            .onAppear {
+                if let mode = ScreenshotMode.current { path = mode.prepare(modelContext) }
+            }
+        #endif
     }
 }
 

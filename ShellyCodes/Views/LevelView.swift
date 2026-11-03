@@ -112,6 +112,12 @@ struct LevelView: View {
             loaded = true
             if let saved = records.first?.code, !saved.isEmpty { code = saved }
             playback.reset(to: level.start)
+            #if DEBUG
+                if let mode = ScreenshotMode.current, let screenshotCode = mode.code(for: level) {
+                    code = screenshotCode
+                    run()
+                }
+            #endif
         }
         .onChange(of: code) {
             errorLine = nil
@@ -166,6 +172,9 @@ struct LevelView: View {
         let after = before - previousBest + record.stars
         let newShell = Shell.allCases.first { !$0.isUnlocked(stars: before) && $0.isUnlocked(stars: after) }
         bubble = .story(level.story)
+        #if DEBUG
+            if ScreenshotMode.current?.showsSuccess == false { return }
+        #endif
         success = LevelSuccess(
             stars: stars,
             shortCode: level.par.map { codeLineCount(code) <= $0 } ?? true,

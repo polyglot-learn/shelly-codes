@@ -43,12 +43,27 @@ nonisolated final class Interpreter {
     private var fillPath: [Point]?
     private var rng: SplitMix
 
+    /// Runs on its own thread with a big stack: deep recursion in a child's program
+    /// nests many Swift calls, and must never overflow the caller's smaller stack.
     static func run(
         _ source: String,
         start: TurtleState = TurtleState(),
         seed: UInt64 = UInt64.random(in: 0...UInt64.max)
     ) -> RunResult {
-        Interpreter(start: start, seed: seed).run(source)
+        let box = ResultBox()
+        let done = DispatchSemaphore(value: 0)
+        let thread = Thread {
+            box.result = Interpreter(start: start, seed: seed).run(source)
+            done.signal()
+        }
+        thread.stackSize = 32 << 20
+        thread.start()
+        done.wait()
+        return box.result!
+    }
+
+    private final class ResultBox: @unchecked Sendable {
+        var result: RunResult?
     }
 
     private init(start: TurtleState, seed: UInt64) {

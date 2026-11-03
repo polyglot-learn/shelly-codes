@@ -59,7 +59,6 @@ struct SpeechBubble: View {
                 Text(LocalizedStringKey(bubble.message))
                     .font(.system(size: 19, weight: .medium, design: .rounded))
                     .fixedSize(horizontal: false, vertical: true)
-                    .accessibilityIdentifier("bubbleMessage")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(14)
@@ -68,6 +67,7 @@ struct SpeechBubble: View {
         }
         .animation(.spring(duration: 0.3), value: bubble)
         .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("bubbleMessage")
     }
 }
 

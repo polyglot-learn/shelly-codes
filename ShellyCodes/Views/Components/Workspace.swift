@@ -6,9 +6,12 @@ struct Workspace<Header: View, Editor: View, Stage: View>: View {
     @ViewBuilder var editor: Editor
     @ViewBuilder var stage: Stage
 
+    /// Decided from the size without the keyboard. If the keyboard could flip the layout,
+    /// SwiftUI would rebuild the code editor and it would lose focus as soon as it got it.
+    @State private var landscape = false
+
     var body: some View {
         GeometryReader { geometry in
-            let landscape = geometry.size.width > geometry.size.height * 1.05
             if landscape {
                 HStack(spacing: 16) {
                     VStack(spacing: 12) {
@@ -27,6 +30,18 @@ struct Workspace<Header: View, Editor: View, Stage: View>: View {
             }
         }
         .padding(16)
+        .background {
+            GeometryReader { geometry in
+                Color.clear
+                    .onAppear { landscape = Self.isLandscape(geometry.size) }
+                    .onChange(of: geometry.size) { landscape = Self.isLandscape(geometry.size) }
+            }
+            .ignoresSafeArea(.keyboard)
+        }
+    }
+
+    static func isLandscape(_ size: CGSize) -> Bool {
+        size.width > size.height * 1.05
     }
 }
 

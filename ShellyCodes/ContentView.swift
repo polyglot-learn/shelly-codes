@@ -18,8 +18,15 @@ struct ContentView: View {
                     }
                 }
         }
-        .fullScreenCover(isPresented: .constant(!welcomed)) {
-            WelcomeView { welcomed = true }
+        // An overlay, not a fullScreenCover: after a cover is dismissed, the code editor
+        // could no longer become first responder on first launch.
+        .overlay {
+            if !welcomed {
+                WelcomeView {
+                    withAnimation(.easeOut(duration: 0.3)) { welcomed = true }
+                }
+                .transition(.opacity)
+            }
         }
         #if DEBUG
             .onAppear {

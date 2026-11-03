@@ -1,4 +1,4 @@
-.PHONY: test unit format lint screenshots icon
+.PHONY: test unit format lint screenshots icon listing
 
 # Build and run all unit and UI tests on an iPad simulator.
 test:
@@ -21,3 +21,7 @@ screenshots:
 # Redraw the app icon.
 icon:
 	swift scripts/make_icon.swift ShellyCodes/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+
+# Check the App Store listing in APP_STORE.md against Apple's limits.
+listing:
+	python3 scripts/check_listing.py

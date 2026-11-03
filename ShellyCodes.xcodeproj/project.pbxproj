@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0908F3643CBFCC28C8A042D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB4072B07677C10071DF6B28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1D64D2E43432002645B6A89;
+			remoteInfo = ShellyCodes;
+		};
+		F8199E684893372EFFBED467 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB4072B07677C10071DF6B28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1D64D2E43432002645B6A89;
+			remoteInfo = ShellyCodes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		073F6153E329B040235E5D57 /* ShellyCodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShellyCodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E630B02982CC3FF94ED3D2 /* ShellyCodesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShellyCodesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF21FED90DCAE45CC1B1F90 /* ShellyCodesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShellyCodesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FC82510688E1A3C7AD860905 /* ShellyCodes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShellyCodes;
+			sourceTree = "<group>";
+		};
+		9F4F8B1EF130275430366F66 /* ShellyCodesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShellyCodesTests;
+			sourceTree = "<group>";
+		};
+		31054BA4F30452305C7ED8ED /* ShellyCodesUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShellyCodesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CDC5F800022A0553B74D3D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		137DC6592912803E69813806 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FDA7C20D435E06E0A90F8B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09424751AE342D6AF4974693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12F9917B93618146143D25F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B625AD649606E3585AF54867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AB3A45BF58F2E4CFE1DAB3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D4A7341C7C01F6654A90C8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6C6A9EF236CCE7B1D7C91B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End build phase sections */
+
+/* Begin PBXGroup section */
+		622D6C2887D83EE42D39F09D = {
+			isa = PBXGroup;
+			children = (
+				FC82510688E1A3C7AD860905 /* ShellyCodes */,
+				9F4F8B1EF130275430366F66 /* ShellyCodesTests */,
+				31054BA4F30452305C7ED8ED /* ShellyCodesUITests */,
+				720552A436A4A45831CC8C4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		720552A436A4A45831CC8C4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				073F6153E329B040235E5D57 /* ShellyCodes.app */,
+				33E630B02982CC3FF94ED3D2 /* ShellyCodesTests.xctest */,
+				BDF21FED90DCAE45CC1B1F90 /* ShellyCodesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1D64D2E43432002645B6A89 /* ShellyCodes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3068D4E66117692C8C4F30CC /* Build configuration list for PBXNativeTarget "ShellyCodes" */;
+			buildPhases = (
+				3FDA7C20D435E06E0A90F8B1 /* Sources */,
+				5CDC5F800022A0553B74D3D7 /* Frameworks */,
+				137DC6592912803E69813806 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FC82510688E1A3C7AD860905 /* ShellyCodes */,
+			);
+			name = ShellyCodes;
+			packageProductDependencies = (
+			);
+			productName = ShellyCodes;
+			productReference = 073F6153E329B040235E5D57 /* ShellyCodes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C451AFF8B1EF3A0A6AE62364 /* ShellyCodesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F191C62543940F0EA5DF2C91 /* Build configuration list for PBXNativeTarget "ShellyCodesTests" */;
+			buildPhases = (
+				B625AD649606E3585AF54867 /* Sources */,
+				09424751AE342D6AF4974693 /* Frameworks */,
+				12F9917B93618146143D25F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6430B57EF6959D3064461F9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9F4F8B1EF130275430366F66 /* ShellyCodesTests */,
+			);
+			name = ShellyCodesTests;
+			packageProductDependencies = (
+			);
+			productName = ShellyCodesTests;
+			productReference = 33E630B02982CC3FF94ED3D2 /* ShellyCodesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		467BE9988BCB52C3B5F8D33B /* ShellyCodesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 676002BE233F91FB06382A6B /* Build configuration list for PBXNativeTarget "ShellyCodesUITests" */;
+			buildPhases = (
+				0A6C6A9EF236CCE7B1D7C91B /* Sources */,
+				2AB3A45BF58F2E4CFE1DAB3B /* Frameworks */,
+				7D4A7341C7C01F6654A90C8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ED971BF80B10163361555FA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				31054BA4F30452305C7ED8ED /* ShellyCodesUITests */,
+			);
+			name = ShellyCodesUITests;
+			packageProductDependencies = (
+			);
+			productName = ShellyCodesUITests;
+			productReference = BDF21FED90DCAE45CC1B1F90 /* ShellyCodesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB4072B07677C10071DF6B28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					F1D64D2E43432002645B6A89 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					C451AFF8B1EF3A0A6AE62364 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = F1D64D2E43432002645B6A89;
+					};
+					467BE9988BCB52C3B5F8D33B = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = F1D64D2E43432002645B6A89;
+					};
+				};
+			};
+			buildConfigurationList = A7C876315086AB12317A2357 /* Build configuration list for PBXProject "ShellyCodes" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 622D6C2887D83EE42D39F09D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 720552A436A4A45831CC8C4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1D64D2E43432002645B6A89 /* ShellyCodes */,
+				C451AFF8B1EF3A0A6AE62364 /* ShellyCodesTests */,
+				467BE9988BCB52C3B5F8D33B /* ShellyCodesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXTargetDependency section */
+		C6430B57EF6959D3064461F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1D64D2E43432002645B6A89 /* ShellyCodes */;
+			targetProxy = 0908F3643CBFCC28C8A042D6 /* PBXContainerItemProxy */;
+		};
+		1ED971BF80B10163361555FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1D64D2E43432002645B6A89 /* ShellyCodes */;
+			targetProxy = F8199E684893372EFFBED467 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2ECD07784365A144971FB496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C6AB553BA0FC27FEDBBFCC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7204EAB3820681A001CDD8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Shelly Codes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.shellycodes;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		F90A39BA22D621C12F6FADFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Shelly Codes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.shellycodes;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		D4FDF3FE7323F3C9D4673E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.shellycodes.tests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellyCodes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShellyCodes";
+			};
+			name = Debug;
+		};
+		EEED3A936754D6782206CCB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.shellycodes.tests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellyCodes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShellyCodes";
+			};
+			name = Release;
+		};
+		EF1A2B700D9C7D91CFA735AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "2";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.shellycodes.uitests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = ShellyCodes;
+			};
+			name = Debug;
+		};
+		21A79C1130AA3FE67F245567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "2";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.shellycodes.uitests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = ShellyCodes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7C876315086AB12317A2357 /* Build configuration list for PBXProject "ShellyCodes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ECD07784365A144971FB496 /* Debug */,
+				3C6AB553BA0FC27FEDBBFCC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3068D4E66117692C8C4F30CC /* Build configuration list for PBXNativeTarget "ShellyCodes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7204EAB3820681A001CDD8F9 /* Debug */,
+				F90A39BA22D621C12F6FADFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F191C62543940F0EA5DF2C91 /* Build configuration list for PBXNativeTarget "ShellyCodesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FDF3FE7323F3C9D4673E25 /* Debug */,
+				EEED3A936754D6782206CCB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		676002BE233F91FB06382A6B /* Build configuration list for PBXNativeTarget "ShellyCodesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1A2B700D9C7D91CFA735AC /* Debug */,
+				21A79C1130AA3FE67F245567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB4072B07677C10071DF6B28 /* Project object */;
+}

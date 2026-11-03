@@ -4,6 +4,10 @@ import Foundation
 nonisolated struct Parser {
     private var tokens: [Token]
     private var pos = 0
+    private var depth = 0
+
+    /// Deepest nesting of brackets, operators or blocks, so silly input can't exhaust the stack.
+    static let maxDepth = 100
 
     static func parse(_ source: String) throws -> [Stmt] {
         var parser = Parser(tokens: try Lexer.tokenize(source))
@@ -39,6 +43,15 @@ nonisolated struct Parser {
 
     private func fail(_ message: String) -> PyError {
         PyError(line: line, message: message)
+    }
+
+    private mutating func nested<T>(_ parse: (inout Parser) throws -> T) throws -> T {
+        depth += 1
+        defer { depth -= 1 }
+        if depth > Self.maxDepth {
+            throw fail("That's too many things inside each other! Try splitting it into simpler lines.")
+        }
+        return try parse(&self)
     }
 
     // MARK: - Statements
@@ -177,6 +190,10 @@ nonisolated struct Parser {
                 "The lines inside this \(keyword) need to be pushed in (indented) with 4 spaces, so Shelly knows they belong to it."
             )
         }
+        return try nested { try $0.blockBody() }
+    }
+
+    private mutating func blockBody() throws -> [Stmt] {
         var body: [Stmt] = []
         while peek != .dedent && peek != .eof {
             if peek == .indent {
@@ -348,7 +365,7 @@ nonisolated struct Parser {
     // MARK: - Expressions
 
     private mutating func expression() throws -> Expr {
-        try orExpr()
+        try nested { try $0.orExpr() }
     }
 
     private mutating func orExpr() throws -> Expr {
@@ -369,7 +386,7 @@ nonisolated struct Parser {
 
     private mutating func notExpr() throws -> Expr {
         if accept(.keyword("not")) {
-            return .unary("not", try notExpr())
+            return .unary("not", try nested { try $0.notExpr() })
         }
         return try comparison()
     }
@@ -415,7 +432,7 @@ nonisolated struct Parser {
     private mutating func factor() throws -> Expr {
         if case .op(let op) = peek, op == "-" || op == "+" {
             advance()
-            return .unary(op, try factor())
+            return .unary(op, try nested { try $0.factor() })
         }
         return try power()
     }
@@ -423,7 +440,7 @@ nonisolated struct Parser {
     private mutating func power() throws -> Expr {
         let base = try postfix()
         if accept(.op("**")) {
-            return .binary("**", base, try factor())
+            return .binary("**", base, try nested { try $0.factor() })
         }
         return base
     }

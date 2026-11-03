@@ -57,6 +57,7 @@ nonisolated final class Interpreter {
             done.signal()
         }
         thread.stackSize = 32 << 20
+        thread.qualityOfService = Thread.isMainThread ? .userInteractive : Thread.current.qualityOfService
         thread.start()
         done.wait()
         return box.result!

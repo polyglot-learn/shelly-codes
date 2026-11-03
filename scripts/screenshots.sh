@@ -4,7 +4,7 @@
 # Usage: scripts/screenshots.sh   (writes to screenshots/)
 set -euo pipefail
 
-bundle=org.polyglotlearn.shellycodes
+bundle=com.thejesh.shellycodes
 out=screenshots
 scenes=(home level success error freedraw gallery shells)
 

@@ -74,14 +74,14 @@ Hello from Shelly! Our first version: 27 Python puzzles, Free Draw, and six shel
 
 | Field | Value |
 |---|---|
-| Bundle ID | `org.polyglotlearn.shellycodes` (change in Xcode if you publish under your own) |
+| Bundle ID | `com.thejesh.shellycodes` |
 | SKU | `shellycodes` |
 | Primary category | Education |
 | Secondary category | Entertainment (optional) |
 | Kids Category | Yes, age band **9–11** |
 | Price | Free |
 | Devices | iPad only, iPadOS 17 or later |
-| Copyright | 2026 thejesh23 |
+| Copyright | 2026 Thejesh Avula |
 | Support URL | https://polyglot-learn.github.io/shelly-codes/ |
 | Privacy policy URL | https://polyglot-learn.github.io/shelly-codes/privacy |
 | Marketing URL | (optional) https://github.com/polyglot-learn/shelly-codes |
@@ -124,8 +124,8 @@ Suggested order: 2-level, 4-error, 3-success, 5-freedraw, 1-home, 6-gallery, 7-s
 ## Release checklist
 
 1. **Apple Developer Program** membership ($99/year) on the account that will publish.
-2. In Xcode, select the ShellyCodes target → Signing & Capabilities → choose your **Team**.
-   Change the bundle ID if `org.polyglotlearn.shellycodes` isn't yours.
+2. Signing uses team `MVTQ45X92L` with automatic signing; Xcode must be signed in to
+   that Apple account.
 3. **Host the privacy policy and support page:** on GitHub, Settings → Pages →
    Deploy from branch `main`, folder `/docs`. Check both URLs above load.
 4. In **App Store Connect**: My Apps → + → New App → iOS, name "Shelly Codes",

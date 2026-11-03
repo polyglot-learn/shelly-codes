@@ -102,6 +102,7 @@ struct CodeEditor: UIViewRepresentable {
         textView.accessibilityLabel = String(localized: "Python code")
         textView.text = text
         context.coordinator.highlight(textView)
+        textView.selectedRange = NSRange(location: (text as NSString).length, length: 0)
         return textView
     }
 
@@ -129,6 +130,16 @@ struct CodeEditor: UIViewRepresentable {
 
         init(_ parent: CodeEditor) {
             self.parent = parent
+        }
+
+        func textViewDidBeginEditing(_ textView: UITextView) {
+            // The tap that focuses the editor can leave the caret at the very start. Children
+            // nearly always mean to add code at the end, so put it there instead.
+            DispatchQueue.main.async {
+                if textView.selectedRange == NSRange(location: 0, length: 0), textView.text.count > 0 {
+                    textView.selectedRange = NSRange(location: (textView.text as NSString).length, length: 0)
+                }
+            }
         }
 
         func textViewDidChange(_ textView: UITextView) {

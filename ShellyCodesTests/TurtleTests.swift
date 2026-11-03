@@ -30,7 +30,8 @@ struct TurtleTests {
     }
 
     @Test func positionAndHeadingQuestions() {
-        let result = Interpreter.run("goto(30, 40)\nsetheading(-90)\nright(90)\nprint(xcor(), ycor(), heading())\nhome()\nprint(xcor(), heading())")
+        let result = Interpreter.run(
+            "goto(30, 40)\nsetheading(-90)\nright(90)\nprint(xcor(), ycor(), heading())\nhome()\nprint(xcor(), heading())")
         #expect(result.output == "30.0 40.0 180.0\n0.0 0.0\n")
     }
 

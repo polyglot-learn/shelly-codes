@@ -42,7 +42,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "1.2", title: "Far Away",
-                story: "That star is far away! Change the number in `forward( )` so I walk all the way there. Each square on the grid is 50 steps.",
+                story:
+                    "That star is far away! Change the number in `forward( )` so I walk all the way there. Each square on the grid is 50 steps.",
                 starter: "forward(100)\n",
                 solution: "forward(300)",
                 chips: ["forward(100)", "forward(300)"],
@@ -146,7 +147,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "2.3", title: "Remember It",
-                story: "I'm 100 years old. Turtles live a long time! A **variable** is a name that remembers a value. Print how old I'll be in 5 years, using `age + 5`.",
+                story:
+                    "I'm 100 years old. Turtles live a long time! A **variable** is a name that remembers a value. Print how old I'll be in 5 years, using `age + 5`.",
                 starter: "age = 100\nprint(age)\n",
                 solution: "age = 100\nprint(age + 5)",
                 chips: ["age = 100", "print(age)", "+ 5"],
@@ -182,7 +184,8 @@ nonisolated enum Curriculum {
         levels: [
             Level(
                 id: "3.1", title: "Loop Square",
-                story: "Typing the same thing 4 times is boring. A `for` loop repeats it for me! The lines pushed in with spaces get repeated. Add a turn to finish the square.",
+                story:
+                    "Typing the same thing 4 times is boring. A `for` loop repeats it for me! The lines pushed in with spaces get repeated. Add a turn to finish the square.",
                 starter: "for i in range(4):\n    forward(100)\n",
                 solution: "for i in range(4):\n    forward(100)\n    left(90)",
                 chips: ["for i in range(4):", "forward(100)", "left(90)"],
@@ -241,7 +244,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "3.5", title: "Beehive",
-                story: "Bees build their homes from **hexagons**: 6 sides of 70 steps. Each corner turns 360 ÷ 6. Write the whole loop yourself!",
+                story:
+                    "Bees build their homes from **hexagons**: 6 sides of 70 steps. Each corner turns 360 ÷ 6. Write the whole loop yourself!",
                 starter: "# Draw a hexagon with a for loop\n",
                 solution: "for i in range(6):\n    forward(70)\n    left(60)",
                 chips: ["for i in range(6):", "forward(70)", "left(60)"],
@@ -280,7 +284,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "4.2", title: "Jump!",
-                story: "`penup()` lifts my pen, so I can walk without drawing. `pendown()` puts it back. Draw the two lines with a gap in the middle.",
+                story:
+                    "`penup()` lifts my pen, so I can walk without drawing. `pendown()` puts it back. Draw the two lines with a gap in the middle.",
                 starter: "forward(100)\n",
                 solution: "forward(100)\npenup()\nforward(100)\npendown()\nforward(100)",
                 chips: ["forward(100)", "penup()", "pendown()"],
@@ -310,7 +315,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "4.4", title: "Round and Round",
-                story: "`circle(50)` walks me round in a circle. The number is the **radius**: how far the middle is from the edge. Draw the big dotted circle!",
+                story:
+                    "`circle(50)` walks me round in a circle. The number is the **radius**: how far the middle is from the edge. Draw the big dotted circle!",
                 starter: "circle(50)\n",
                 solution: "circle(100)",
                 chips: ["circle(50)", "circle(100)"],
@@ -349,7 +355,8 @@ nonisolated enum Curriculum {
         levels: [
             Level(
                 id: "5.1", title: "Growing Spiral",
-                story: "Variables can change! If `size` gets bigger every time round the loop, I draw a spiral. Add `size = size + 10` inside the loop.",
+                story:
+                    "Variables can change! If `size` gets bigger every time round the loop, I draw a spiral. Add `size = size + 10` inside the loop.",
                 starter: "size = 10\nfor i in range(16):\n    forward(size)\n    left(90)\n",
                 solution: "size = 10\nfor i in range(16):\n    forward(size)\n    left(90)\n    size = size + 10",
                 chips: ["size = size + 10", "forward(size)", "left(90)"],
@@ -364,9 +371,11 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "5.2", title: "Rainbow Road",
-                story: "A **list** holds many things inside `[ ]`. A for loop can go through a list one thing at a time. Add green, blue and purple to finish the rainbow!",
+                story:
+                    "A **list** holds many things inside `[ ]`. A for loop can go through a list one thing at a time. Add green, blue and purple to finish the rainbow!",
                 starter: "colors = [\"red\", \"orange\", \"yellow\"]\nfor c in colors:\n    color(c)\n    forward(50)\n",
-                solution: "colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"]\nfor c in colors:\n    color(c)\n    forward(50)",
+                solution:
+                    "colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"]\nfor c in colors:\n    color(c)\n    forward(50)",
                 chips: ["\"green\"", "\"blue\"", "\"purple\"", ","],
                 hints: [
                     "Add more colors inside the [ ], with commas between them.",
@@ -380,7 +389,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "5.3", title: "Even or Odd",
-                story: "`if` lets me decide! `n % 2` is what's left over after dividing by 2. If it's 0, the number is even. Add an `else:` so I also say which numbers are odd.",
+                story:
+                    "`if` lets me decide! `n % 2` is what's left over after dividing by 2. If it's 0, the number is even. Add an `else:` so I also say which numbers are odd.",
                 starter: "for n in range(1, 7):\n    if n % 2 == 0:\n        print(n, \"is even\")\n",
                 solution:
                     "for n in range(1, 7):\n    if n % 2 == 0:\n        print(n, \"is even\")\n    else:\n        print(n, \"is odd\")",
@@ -395,7 +405,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "5.4", title: "Countdown",
-                story: "A `while` loop keeps going as long as something is True. This one never stops: run it and see! Make `n` smaller each time, then print **Blast off!** at the end.",
+                story:
+                    "A `while` loop keeps going as long as something is True. This one never stops: run it and see! Make `n` smaller each time, then print **Blast off!** at the end.",
                 starter: "n = 5\nwhile n > 0:\n    print(n)\n",
                 solution: "n = 5\nwhile n > 0:\n    print(n)\n    n = n - 1\nprint(\"Blast off!\")",
                 chips: ["n = n - 1", "print(\"Blast off!\")"],
@@ -418,7 +429,8 @@ nonisolated enum Curriculum {
         levels: [
             Level(
                 id: "6.1", title: "Square Spell",
-                story: "`def` teaches me a new spell, called a **function**. Here I learned `square()`. Use it again to draw a second square, with a gap between them.",
+                story:
+                    "`def` teaches me a new spell, called a **function**. Here I learned `square()`. Use it again to draw a second square, with a gap between them.",
                 starter:
                     "def square():\n    for i in range(4):\n        forward(60)\n        left(90)\n\nsquare()\npenup()\nforward(100)\npendown()\n",
                 solution:
@@ -434,7 +446,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "6.2", title: "Size Spell",
-                story: "Spells can take a value! In `def square(size):`, `size` is whatever number you give it. Draw three squares: **40**, **80** and **120**.",
+                story:
+                    "Spells can take a value! In `def square(size):`, `size` is whatever number you give it. Draw three squares: **40**, **80** and **120**.",
                 starter: "def square(size):\n    for i in range(4):\n        forward(size)\n        left(90)\n\nsquare(40)\n",
                 solution:
                     "def square(size):\n    for i in range(4):\n        forward(size)\n        left(90)\n\nsquare(40)\nsquare(80)\nsquare(120)",
@@ -449,7 +462,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "6.3", title: "Flower Power",
-                story: "Let's grow a flower! The `petal()` spell draws one petal. Use a loop to draw **6 petals**, turning `left(60)` after each one.",
+                story:
+                    "Let's grow a flower! The `petal()` spell draws one petal. Use a loop to draw **6 petals**, turning `left(60)` after each one.",
                 starter:
                     "def petal():\n    circle(80, 60)\n    left(120)\n    circle(80, 60)\n    left(120)\n\ncolor(\"hotpink\")\npetal()\n",
                 solution:
@@ -465,7 +479,8 @@ nonisolated enum Curriculum {
             ),
             Level(
                 id: "6.4", title: "Spin Art",
-                story: "The grand finale! `shape(size)` draws a hexagon. Draw it **12 times**, turning `left(30)` after each one, and watch the magic.",
+                story:
+                    "The grand finale! `shape(size)` draws a hexagon. Draw it **12 times**, turning `left(30)` after each one, and watch the magic.",
                 starter:
                     "def shape(size):\n    for i in range(6):\n        forward(size)\n        left(60)\n\ncolor(\"purple\")\nshape(70)\n",
                 solution:

@@ -29,7 +29,8 @@ final class EditorController {
         let indent = String(line.prefix { $0 == " " })
         let isBlank = line.trimmingCharacters(in: .whitespaces).isEmpty
         let isCommand = snippet.first.map { $0.isLetter || $0 == "_" } ?? false
-        let cursorAtLineEnd = selection.location >= lineContentRange.location + lineContentRange.length
+        let cursorAtLineEnd =
+            selection.location >= lineContentRange.location + lineContentRange.length
             || text.substring(
                 with: NSRange(
                     location: selection.location,
@@ -40,7 +41,8 @@ final class EditorController {
         var insertion: String
         if isBlank {
             range = lineContentRange
-            insertion = (line.isEmpty && lineRange.location > 0 ? indentAfter(text, before: lineRange.location) : indent)
+            insertion =
+                (line.isEmpty && lineRange.location > 0 ? indentAfter(text, before: lineRange.location) : indent)
                 + snippet
         } else if !isCommand || selection.length > 0 || !cursorAtLineEnd {
             range = selection

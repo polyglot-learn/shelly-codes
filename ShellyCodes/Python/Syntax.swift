@@ -116,7 +116,7 @@ nonisolated struct ProgramFacts: Equatable, Sendable {
         case .int, .float, .string, .bool, .none, .name:
             break
         case .list(let items):
-            items.forEach { visit($0) }
+            for item in items { visit(item) }
         case .unary(_, let e):
             visit(e)
         case .binary(_, let a, let b):
@@ -125,7 +125,7 @@ nonisolated struct ProgramFacts: Equatable, Sendable {
             visit(b)
         case .compare(let first, let rest):
             visit(first)
-            rest.forEach { visit($0.right) }
+            for comparison in rest { visit(comparison.right) }
         case .and(let a, let b), .or(let a, let b):
             visit(a)
             visit(b)
@@ -136,8 +136,8 @@ nonisolated struct ProgramFacts: Equatable, Sendable {
             default: break
             }
             visit(callee)
-            args.forEach { visit($0) }
-            kwargs.forEach { visit($0.value) }
+            for arg in args { visit(arg) }
+            for kwarg in kwargs { visit(kwarg.value) }
         case .attribute(let e, _):
             visit(e)
         case .index(let a, let b):

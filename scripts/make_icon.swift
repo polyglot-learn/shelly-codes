@@ -29,8 +29,10 @@ ctx.drawLinearGradient(gradient, start: CGPoint(x: 0, y: 1024), end: CGPoint(x: 
 ctx.setStrokeColor(rgb(0xFFFFFF, 0.35))
 ctx.setLineWidth(4)
 for i in stride(from: 0, through: 1024, by: 128) {
-    ctx.move(to: CGPoint(x: i, y: 0)); ctx.addLine(to: CGPoint(x: i, y: 1024))
-    ctx.move(to: CGPoint(x: 0, y: i)); ctx.addLine(to: CGPoint(x: 1024, y: i))
+    ctx.move(to: CGPoint(x: i, y: 0))
+    ctx.addLine(to: CGPoint(x: i, y: 1024))
+    ctx.move(to: CGPoint(x: 0, y: i))
+    ctx.addLine(to: CGPoint(x: 1024, y: i))
 }
 ctx.strokePath()
 
@@ -68,34 +70,47 @@ func ellipse(_ x: CGFloat, _ y: CGFloat, _ w: CGFloat, _ h: CGFloat) -> CGRect {
 ctx.saveGState()
 ctx.translateBy(x: shelly.x, y: shelly.y)
 ctx.rotate(by: heading * .pi / 180)
-let skin = rgb(0x9BD770), skinDark = rgb(0x4E8A2E)
+let skin = rgb(0x9BD770)
+let skinDark = rgb(0x4E8A2E)
 ctx.setLineWidth(0.025 * s)
 for (x, y) in [(0.2, -0.28), (0.2, 0.28), (-0.22, -0.26), (-0.22, 0.26)] {
     let leg = ellipse(x * s, y * s, 0.2 * s, 0.17 * s)
-    ctx.setFillColor(skin); ctx.fillEllipse(in: leg)
-    ctx.setStrokeColor(skinDark); ctx.strokeEllipse(in: leg)
+    ctx.setFillColor(skin)
+    ctx.fillEllipse(in: leg)
+    ctx.setStrokeColor(skinDark)
+    ctx.strokeEllipse(in: leg)
 }
 ctx.move(to: CGPoint(x: -0.32 * s, y: -0.06 * s))
 ctx.addLine(to: CGPoint(x: -0.5 * s, y: 0))
 ctx.addLine(to: CGPoint(x: -0.32 * s, y: 0.06 * s))
 ctx.closePath()
-ctx.setFillColor(skin); ctx.fillPath()
+ctx.setFillColor(skin)
+ctx.fillPath()
 let head = ellipse(0.4 * s, 0, 0.27 * s, 0.24 * s)
-ctx.setFillColor(skin); ctx.fillEllipse(in: head)
-ctx.setStrokeColor(skinDark); ctx.strokeEllipse(in: head)
+ctx.setFillColor(skin)
+ctx.fillEllipse(in: head)
+ctx.setStrokeColor(skinDark)
+ctx.strokeEllipse(in: head)
 for y in [-0.06, 0.06] {
-    ctx.setFillColor(rgb(0xFFFFFF)); ctx.fillEllipse(in: ellipse(0.46 * s, y * s, 0.075 * s, 0.075 * s))
-    ctx.setFillColor(rgb(0x000000)); ctx.fillEllipse(in: ellipse(0.475 * s, y * s, 0.042 * s, 0.042 * s))
+    ctx.setFillColor(rgb(0xFFFFFF))
+    ctx.fillEllipse(in: ellipse(0.46 * s, y * s, 0.075 * s, 0.075 * s))
+    ctx.setFillColor(rgb(0x000000))
+    ctx.fillEllipse(in: ellipse(0.475 * s, y * s, 0.042 * s, 0.042 * s))
 }
 let body = ellipse(0, 0, 0.66 * s, 0.56 * s)
-ctx.setFillColor(rgb(0x2FBF71)); ctx.fillEllipse(in: body)
-ctx.setFillColor(rgb(0x1E8C50)); ctx.fillEllipse(in: ellipse(0, 0, 0.36 * s, 0.3 * s))
+ctx.setFillColor(rgb(0x2FBF71))
+ctx.fillEllipse(in: body)
+ctx.setFillColor(rgb(0x1E8C50))
+ctx.fillEllipse(in: ellipse(0, 0, 0.36 * s, 0.3 * s))
 for angle in stride(from: 0.0, to: 360.0, by: 60.0) {
     let r = angle * .pi / 180
     ctx.fillEllipse(in: ellipse(0.24 * s * cos(r), 0.2 * s * sin(r), 0.1 * s, 0.09 * s))
 }
-ctx.setStrokeColor(rgb(0x1E8C50)); ctx.setLineWidth(0.035 * s); ctx.strokeEllipse(in: body)
-ctx.setFillColor(rgb(0xFFFFFF, 0.35)); ctx.fillEllipse(in: ellipse(-0.08 * s, 0.12 * s, 0.14 * s, 0.07 * s))
+ctx.setStrokeColor(rgb(0x1E8C50))
+ctx.setLineWidth(0.035 * s)
+ctx.strokeEllipse(in: body)
+ctx.setFillColor(rgb(0xFFFFFF, 0.35))
+ctx.fillEllipse(in: ellipse(-0.08 * s, 0.12 * s, 0.14 * s, 0.07 * s))
 ctx.restoreGState()
 
 let png = NSBitmapImageRep(cgImage: ctx.makeImage()!).representation(using: .png, properties: [:])!

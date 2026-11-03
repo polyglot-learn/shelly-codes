@@ -485,7 +485,10 @@ nonisolated final class Interpreter {
                 }
                 found = text.contains(part)
             case .range(let start, let stop, let step):
-                guard let i = a.integer else { found = false; break }
+                guard let i = a.integer else {
+                    found = false
+                    break
+                }
                 let inside = step > 0 ? (i >= start && i < stop) : (i <= start && i > stop)
                 found = inside && (i - start) % step == 0
             default:
@@ -949,7 +952,9 @@ nonisolated final class Interpreter {
             let end = kwargs["end"].map(\.text) ?? "\n"
             let text = args.map(\.text).joined(separator: separator) + end
             guard output.count + text.count <= Self.maxOutput else {
-                throw fail("That's a lot of printing! Shelly stopped after \(Self.maxOutput.formatted()) letters. Is there a loop that never stops?")
+                throw fail(
+                    "That's a lot of printing! Shelly stopped after \(Self.maxOutput.formatted()) letters. Is there a loop that never stops?"
+                )
             }
             output += text
             try record(.print(text))
